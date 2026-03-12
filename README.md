@@ -5,10 +5,15 @@
 
 ## 项目架构
 ├── src/ 
+
 │ ├── pso_core.py 
+
 │ ├── visualizer.py
+
 │ └── run.py 
+
 ├── .gitignore 
+
 └── README.md
 ## 核心逻辑
 1. **算法层（pso_core.py）**：定义粒子属性（位置、速度）、适应度计算规则，实现粒子位置/速度更新公式，迭代寻找全局最优解；
