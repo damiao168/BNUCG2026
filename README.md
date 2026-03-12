@@ -23,10 +23,9 @@
 - 输出最终寻优结果（全局最优位置、最优适应度值）。
 
 ## 效果展示
-![粒子群交互效果演示](demo.gif)
+![演示视频](src/Work0/7w1L6Gqq_converted.gif)
 
 ## 运行方式
 1. 克隆仓库：`git clone [你的仓库链接]`
 2. 安装依赖：`pip install matplotlib numpy`
 3. 启动项目：`python src/run.py`
-![演示视频](src/Work0/7w1L6Gqq_converted.gif)
