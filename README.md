@@ -271,5 +271,8 @@ $$
 
 ---
 ## 六、效果展示
+<img width="430" height="452" alt="屏幕截图 2026-03-21 174923" src="https://github.com/user-attachments/assets/311c3a83-3791-40e8-8ef8-d9443915c145" />
+
+<img width="430" height="452" alt="image" src="https://github.com/user-attachments/assets/830a9341-6361-4628-945e-93cd8d86c959" />
 
 
