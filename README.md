@@ -2,27 +2,33 @@
 ## 课程链接
 
 课程主页：[https://zhanghongwen.cn/cg](https://zhanghongwen.cn/cg)
-# work0
-# CG-Lab 图形学开发工具实验 - 万有引力粒子群仿真
+
+##  项目结构
+
+```
+BNUCG2026/                          # 项目根目录（GitHub 仓库首页）
+├── .gitignore                      # Git 忽略规则：屏蔽虚拟环境、缓存等无需上传的文件
+├── pyproject.toml                  # uv 项目配置与依赖清单（记录 Taichi 等核心库）
+├── uv.lock                         # uv 依赖锁定文件：保证环境可精准复现
+├── README.md                       # 项目说明文档（本文档）
+│
+├── Work0/                          # 实验 0：万有引力粒子群仿真模块
+│   ├── __init__.py                 # 标识 Work0 为 Python 可导入包
+│   ├── config.py                   # 参数配置中心：统一管理粒子数量、引力强度等可调参数
+│   ├── physics.py                  # GPU 核心逻辑：Taichi 并行计算、粒子物理更新规则
+│   ├── main.py                     # 程序入口：GUI 渲染、鼠标交互、主循环控制
+│   └── __pycache__/                # Python 运行缓存（已被 .gitignore 忽略）
+│
+└── Work1/                          # 实验 1：基础图形学变换与立方体渲染模块
+    ├── lab2_cube.py                # 立方体渲染实现代码
+    └── lab2_transform.py           # 图形学变换（平移/旋转/缩放）实现代码
+```
+
+
+# work0：CG-Lab 图形学开发工具实验 - 万有引力粒子群仿真
 ## 项目简介
 
 本实验为计算机图形学课程的入门实验，旨在通过构建现代化的 Python 工程环境，完成一个基于 GPU 加速的万有引力粒子群仿真。实验引入了高性能包管理器 `uv` 实现项目级依赖隔离，采用经典 `src` 布局规范代码结构，并结合 `Taichi` 编程语言发挥 GPU 并行计算能力，最终实现“环境搭建-逻辑解耦-GPU计算-可视化”的完整图形学开发链路。
-
-## 项目结构
-
-```
-CG-Lab/
-├── .venv/                    # uv 自动生成的虚拟环境（Git 忽略）
-├── .gitignore                # Git 忽略配置
-├── pyproject.toml            # uv 项目配置与依赖清单
-├── README.md                 # 本说明文档
-└── src/                      # 核心代码存放区（src 布局）
-    └── Work0/                # 实验零专属包
-        ├── __init__.py       # 标识 Python 包
-        ├── config.py         # 参数配置中心
-        ├── physics.py        # GPU 核心逻辑区
-        └── main.py           # 程序入口与视图层
-```
 
 ## 运行方式
 
