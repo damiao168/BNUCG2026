@@ -39,13 +39,14 @@ uv run -m src.Work0.main
 程序将编译 GPU 内核并弹出渲染窗口，移动鼠标即可与粒子群交互。
 
 ## 效果展示
+窗口中大量粒子会受鼠标引力吸引，同时受空气阻力和边界反弹影响，形成流畅的动态效果。
+![ezgif-5fef96e2df344b11](https://github.com/user-attachments/assets/b02169c3-e9d5-433b-b8a8-0def490a69ac)
 
 ### GPU 调用验证
 运行程序后，观察终端输出：
 - 成功调用 GPU：显示 `[Taichi] Starting on architecture: cuda/metal/vulkan/opengl`
 - 退回 CPU：显示 `[Taichi] Starting on architecture: cpu`（帧率可能下降）
 
-### 交互效果
-窗口中大量粒子会受鼠标引力吸引，同时受空气阻力和边界反弹影响，形成流畅的动态效果。
+
 
 
