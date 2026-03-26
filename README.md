@@ -518,7 +518,7 @@ $$
 
 ---
 ## 六、效果展示
-<img width="400" height="420" alt="image" src="https://github.com/user-attachments/assets/e30445fc-e2b1-4389-a782-5316a40a40d0" />
+![ezgif-844b787e4661b224](https://github.com/user-attachments/assets/0a7a3d7d-cbc1-4bd4-bbc0-4d231b3690d6)
 
 
 
