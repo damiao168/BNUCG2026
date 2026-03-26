@@ -518,7 +518,9 @@ $$
 
 ---
 ## 六、效果展示
-![ezgif-844b787e4661b224](https://github.com/user-attachments/assets/391bc708-95ae-422c-a520-fe85ea00f35e)
+<img width="400" height="420" alt="image" src="https://github.com/user-attachments/assets/e30445fc-e2b1-4389-a782-5316a40a40d0" />
+
+
 
 
 
