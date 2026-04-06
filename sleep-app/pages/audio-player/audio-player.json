@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "正在播放",
-  "navigationStyle": "custom",
-  "usingComponents": {
-    "icons": "/components/icons/icons"
-  }
-}
