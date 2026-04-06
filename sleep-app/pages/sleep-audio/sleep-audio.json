@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "音频助眠",
-  "usingComponents": {
-    "mini-player": "/components/mini-player/mini-player",
-    "icons": "/components/icons/icons"
-  }
-}

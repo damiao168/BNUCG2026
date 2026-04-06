@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "\u52a9\u7720\u6df7\u97f3",
-  "usingComponents": {
-    "audio-block": "/components/audio-block/audio-block",
-    "control-bar": "/components/control-bar/control-bar"
-  }
-}

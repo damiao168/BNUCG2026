@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "打卡",
-  "permission": {
-    "scope.userLocation": {
-      "desc": "您的位置信息将用于打卡验证"
-    }
-  }
-}
