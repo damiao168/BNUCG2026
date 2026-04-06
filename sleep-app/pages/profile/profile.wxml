@@ -1,0 +1,151 @@
+<view class="page-container theme-{{theme}}">
+  <view class="container">
+    <view class="header" bindtap="{{isLoggedIn ? 'goToEditProfile' : 'goToLogin'}}">
+      <view class="user-info">
+        <view class="avatar">
+          <image wx:if="{{userInfo.avatar}}" class="avatar-img" src="{{userInfo.avatar}}" mode="aspectFill"></image>
+          <icons wx:else name="user" size="60" color="white" />
+        </view>
+        <view class="user-detail">
+          <view class="nickname">{{userInfo.nickname || '点击登录'}}</view>
+          <view class="user-desc">{{isLoggedIn ? '点击修改个人信息' : '登录后享受更多服务'}}</view>
+        </view>
+      </view>
+      <view class="header-arrow">
+        <icons name="arrow-right" size="28" color="secondary" />
+      </view>
+    </view>
+
+    <view class="section">
+      <view class="section-title">我的收藏</view>
+      <view class="menu-card card">
+        <view class="menu-item" bindtap="goToFavorites">
+          <view class="menu-icon">
+            <icons name="favorite" size="36" color="accent2" />
+          </view>
+          <view class="menu-text">收藏音频</view>
+          <view class="menu-arrow">
+            <icons name="arrow-right" size="28" color="secondary" />
+          </view>
+        </view>
+        <view class="menu-item" bindtap="goToRecentPlay">
+          <view class="menu-icon">
+            <icons name="history" size="36" color="accent1" />
+          </view>
+          <view class="menu-text">最近播放</view>
+          <view class="menu-arrow">
+            <icons name="arrow-right" size="28" color="secondary" />
+          </view>
+        </view>
+        <view class="menu-item" bindtap="goToTrainingRecords">
+          <view class="menu-icon">
+            <icons name="training" size="36" color="primary" />
+          </view>
+          <view class="menu-text">训练记录</view>
+          <view class="menu-arrow">
+            <icons name="arrow-right" size="28" color="secondary" />
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="section">
+      <view class="section-title">设置</view>
+      <view class="menu-card card">
+        <view class="menu-item" bindtap="toggleScreenAwake">
+          <view class="menu-icon">
+            <icons name="sun" size="36" color="primary" />
+          </view>
+          <view class="menu-text">屏幕常亮</view>
+          <switch checked="{{settings.screenAwake}}" color="var(--primary-color)" bindchange="onScreenAwakeChange" />
+        </view>
+        <view class="menu-item" bindtap="showVolumeSetting">
+          <view class="menu-icon">
+            <icons name="volume" size="36" color="primary" />
+          </view>
+          <view class="menu-text">默认音量</view>
+          <view class="menu-value">{{settings.defaultVolume}}%</view>
+        </view>
+        <view class="menu-item" bindtap="showFadeOutSetting">
+          <view class="menu-icon">
+            <icons name="settings" size="36" color="primary" />
+          </view>
+          <view class="menu-text">淡出时长</view>
+          <view class="menu-value">{{settings.fadeOutDuration}}秒</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="section">
+      <view class="section-title">其他</view>
+      <view class="menu-card card">
+        <view class="menu-item" bindtap="showAbout">
+          <view class="menu-icon">
+            <icons name="star" size="36" color="accent1" />
+          </view>
+          <view class="menu-text">关于我们</view>
+          <view class="menu-arrow">
+            <icons name="arrow-right" size="28" color="secondary" />
+          </view>
+        </view>
+        <view class="menu-item" bindtap="showFeedback">
+          <view class="menu-icon">
+            <icons name="heart" size="36" color="accent2" />
+          </view>
+          <view class="menu-text">意见反馈</view>
+          <view class="menu-arrow">
+            <icons name="arrow-right" size="28" color="secondary" />
+          </view>
+        </view>
+        <view class="menu-item" wx:if="{{isLoggedIn}}" bindtap="handleLogout">
+          <view class="menu-icon">
+            <icons name="close" size="36" color="error" />
+          </view>
+          <view class="menu-text">退出登录</view>
+          <view class="menu-arrow">
+            <icons name="arrow-right" size="28" color="secondary" />
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="footer">
+      <text class="footer-text">助眠放松 v1.0.0</text>
+      <text class="footer-text">© 2024 Sleep Relax</text>
+    </view>
+  </view>
+
+  <view class="modal {{showModal ? 'show' : ''}}" bindtap="hideModal">
+    <view class="modal-content" catchtap="">
+      <view class="modal-title">{{modalTitle}}</view>
+      <view class="modal-body">
+        <slider 
+          wx:if="{{modalType === 'volume'}}"
+          min="0" 
+          max="100" 
+          value="{{tempValue}}"
+          block-size="20"
+          activeColor="var(--primary-color)"
+          backgroundColor="var(--disabled-color)"
+          bindchange="onModalValueChange"
+          show-value
+        />
+        <slider 
+          wx:if="{{modalType === 'fadeOut'}}"
+          min="5" 
+          max="30" 
+          value="{{tempValue}}"
+          block-size="20"
+          activeColor="var(--primary-color)"
+          backgroundColor="var(--disabled-color)"
+          bindchange="onModalValueChange"
+          show-value
+        />
+      </view>
+      <view class="modal-actions">
+        <button class="btn-secondary" bindtap="hideModal">取消</button>
+        <button class="btn-primary" bindtap="confirmModal">确定</button>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,106 @@
+<view class="page-container theme-{{theme}}">
+  <view class="container">
+    <view class="header">
+      <view class="greeting">
+        <view class="time-greeting">{{timeGreeting}}</view>
+        <view class="date">{{currentDate}}</view>
+      </view>
+      <view class="theme-toggle" bindtap="toggleTheme">
+        <view class="theme-icon">
+          <icons name="{{theme === 'dark' ? 'sun' : 'moon'}}" size="36" color="primary" />
+        </view>
+        <text class="theme-text">{{theme === 'dark' ? '白天模式' : '夜间模式'}}</text>
+      </view>
+    </view>
+
+    <view class="start-section">
+      <view class="start-btn" bindtap="startRandomPlay">
+        <view class="start-icon">
+          <icons name="play" size="48" color="white" />
+        </view>
+        <view class="start-content">
+          <view class="start-title">开始助眠</view>
+          <view class="start-desc">随机播放舒缓音频</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="feature-section">
+      <view class="feature-grid">
+        <view class="feature-card" bindtap="goToSleepAudio">
+          <view class="feature-icon">
+            <icons name="sleep" size="56" color="accent1" />
+          </view>
+          <view class="feature-info">
+            <view class="feature-name">音频助眠</view>
+            <view class="feature-desc">放松身心，安然入睡</view>
+          </view>
+          <view class="feature-arrow">
+            <icons name="arrow-right" size="28" color="secondary" />
+          </view>
+        </view>
+        <view class="feature-card" bindtap="goToRelaxTraining">
+          <view class="feature-icon">
+            <icons name="training" size="56" color="accent2" />
+          </view>
+          <view class="feature-info">
+            <view class="feature-name">放松训练</view>
+            <view class="feature-desc">呼吸冥想，舒缓压力</view>
+          </view>
+          <view class="feature-arrow">
+            <icons name="arrow-right" size="28" color="secondary" />
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="section">
+      <view class="section-header">
+        <text class="section-title">推荐音频</text>
+        <text class="section-more" bindtap="goToSleepAudio">更多</text>
+      </view>
+      <scroll-view class="audio-scroll" scroll-x>
+        <view class="audio-list">
+          <view 
+            class="audio-item" 
+            wx:for="{{recommendAudios}}" 
+            wx:key="id"
+            bindtap="playAudio"
+            data-audio="{{item}}"
+          >
+            <image class="audio-cover" src="{{item.cover}}" mode="aspectFill"></image>
+            <view class="audio-name ellipsis">{{item.name}}</view>
+            <view class="audio-duration">{{item.durationText}}</view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+
+    <view class="section">
+      <view class="section-header">
+        <text class="section-title">热门训练</text>
+        <text class="section-more" bindtap="goToRelaxTraining">更多</text>
+      </view>
+      <view class="training-list">
+        <view 
+          class="training-card card" 
+          wx:for="{{hotTrainings}}" 
+          wx:key="id"
+          bindtap="startTraining"
+          data-training="{{item}}"
+        >
+          <view class="training-header">
+            <view class="training-icon {{item.iconType}}">
+              <icons name="{{item.iconType}}" size="40" color="primary" />
+            </view>
+            <view class="training-info">
+              <view class="training-name">{{item.name}}</view>
+              <view class="training-meta">{{item.duration}}分钟 · {{item.level}}</view>
+            </view>
+          </view>
+          <view class="training-desc">{{item.description}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

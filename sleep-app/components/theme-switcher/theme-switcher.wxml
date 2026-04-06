@@ -1,0 +1,6 @@
+<view class="theme-switcher {{theme}}" bindtap="toggleTheme">
+  <view class="switcher-bg"></view>
+  <view class="icon-wrapper {{isAnimating ? 'animating' : ''}}">
+    <text class="icon">{{theme === 'dark' ? '☀️' : '🌙'}}</text>
+  </view>
+</view>

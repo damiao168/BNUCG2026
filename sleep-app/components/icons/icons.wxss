@@ -1,0 +1,432 @@
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.icon-moon,
+.icon-sun,
+.icon-sleep,
+.icon-training,
+.icon-breath,
+.icon-body,
+.icon-music,
+.icon-nature,
+.icon-heart,
+.icon-user,
+.icon-play,
+.icon-pause,
+.icon-volume,
+.icon-favorite,
+.icon-history,
+.icon-settings,
+.icon-arrow-right,
+.icon-close,
+.icon-check,
+.icon-star,
+.icon-home,
+.icon-profile {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.icon-moon {
+  width: 60%;
+  height: 60%;
+  border: 3rpx solid var(--icon-color, var(--primary-color));
+  border-radius: 50%;
+  border-right-color: transparent;
+}
+
+.icon-sun {
+  width: 40%;
+  height: 40%;
+  border: 3rpx solid var(--icon-color, var(--primary-color));
+  border-radius: 50%;
+}
+
+.icon-sun::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140%;
+  height: 140%;
+  transform: translate(-50%, -50%);
+  background: 
+    linear-gradient(var(--icon-color, var(--primary-color)), var(--icon-color, var(--primary-color))) center/3rpx 100% no-repeat,
+    linear-gradient(var(--icon-color, var(--primary-color)), var(--icon-color, var(--primary-color))) 0 center/100% 3rpx no-repeat;
+  opacity: 0.6;
+}
+
+.icon-sleep {
+  width: 60%;
+  height: 60%;
+  border: 3rpx solid var(--icon-color, var(--primary-color));
+  border-radius: 50%;
+  border-right-color: transparent;
+}
+
+.icon-sleep::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  width: 3rpx;
+  height: 3rpx;
+  background: var(--icon-color, var(--primary-color));
+  border-radius: 50%;
+  box-shadow: 6rpx 4rpx 0 0 var(--icon-color, var(--primary-color)), 12rpx 0 0 0 var(--icon-color, var(--primary-color));
+}
+
+.icon-training {
+  width: 50%;
+  height: 60%;
+  border: 3rpx solid var(--icon-color, var(--primary-color));
+  border-radius: 50% 50% 0 0;
+  border-bottom: none;
+}
+
+.icon-training::before {
+  content: '';
+  position: absolute;
+  bottom: -15%;
+  left: 50%;
+  width: 3rpx;
+  height: 30%;
+  background: var(--icon-color, var(--primary-color));
+  transform: translateX(-50%);
+}
+
+.icon-breath {
+  width: 50%;
+  height: 50%;
+  border: 3rpx solid var(--icon-color, var(--primary-color));
+  border-radius: 50%;
+}
+
+.icon-breath::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  border: 3rpx solid var(--icon-color, var(--primary-color));
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon-body {
+  width: 30%;
+  height: 30%;
+  border: 3rpx solid var(--icon-color, var(--primary-color));
+  border-radius: 50%;
+}
+
+.icon-body::before {
+  content: '';
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  width: 3rpx;
+  height: 50%;
+  background: var(--icon-color, var(--primary-color));
+  transform: translateX(-50%);
+}
+
+.icon-body::after {
+  content: '';
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: 40%;
+  height: 3rpx;
+  background: var(--icon-color, var(--primary-color));
+  transform: translateX(-50%);
+}
+
+.icon-music {
+  width: 50%;
+  height: 60%;
+  border: 3rpx solid var(--icon-color, var(--primary-color));
+  border-radius: 0 0 50% 50%;
+  border-top: none;
+}
+
+.icon-music::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3rpx;
+  height: 100%;
+  background: var(--icon-color, var(--primary-color));
+}
+
+.icon-nature {
+  width: 0;
+  height: 0;
+  border-left: 35% solid transparent;
+  border-right: 35% solid transparent;
+  border-bottom: 60% solid var(--icon-color, var(--primary-color));
+  opacity: 0.8;
+}
+
+.icon-nature::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 3rpx;
+  height: 25%;
+  background: var(--icon-color, var(--primary-color));
+  transform: translateX(-50%);
+}
+
+.icon-heart {
+  width: 50%;
+  height: 45%;
+  position: relative;
+}
+
+.icon-heart::before,
+.icon-heart::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  border: 3rpx solid var(--icon-color, var(--primary-color));
+  border-radius: 50% 50% 0 0;
+  border-bottom: none;
+}
+
+.icon-heart::before {
+  left: 0;
+  transform: rotate(-45deg);
+  transform-origin: bottom right;
+}
+
+.icon-heart::after {
+  right: 0;
+  transform: rotate(45deg);
+  transform-origin: bottom left;
+}
+
+.icon-user {
+  width: 35%;
+  height: 35%;
+  border: 3rpx solid var(--icon-color, var(--primary-color));
+  border-radius: 50%;
+}
+
+.icon-user::before {
+  content: '';
+  position: absolute;
+  bottom: -5%;
+  left: 50%;
+  width: 60%;
+  height: 35%;
+  border: 3rpx solid var(--icon-color, var(--primary-color));
+  border-radius: 0 0 50% 50%;
+  border-top: none;
+  transform: translateX(-50%);
+}
+
+.icon-play {
+  width: 0;
+  height: 0;
+  border-top: 35% solid transparent;
+  border-bottom: 35% solid transparent;
+  border-left: 60% solid var(--icon-color, var(--primary-color));
+}
+
+.icon-pause {
+  width: 50%;
+  height: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-pause::before,
+.icon-pause::after {
+  content: '';
+  width: 30%;
+  height: 100%;
+  background: var(--icon-color, var(--primary-color));
+  border-radius: 2rpx;
+}
+
+.icon-volume {
+  width: 0;
+  height: 0;
+  border-top: 25% solid transparent;
+  border-bottom: 25% solid transparent;
+  border-left: 35% solid var(--icon-color, var(--primary-color));
+}
+
+.icon-volume::before {
+  content: '';
+  position: absolute;
+  left: 30%;
+  top: 50%;
+  width: 50%;
+  height: 50%;
+  border: 3rpx solid var(--icon-color, var(--primary-color));
+  border-radius: 50%;
+  border-left-color: transparent;
+  transform: translateY(-50%);
+}
+
+.icon-favorite {
+  width: 50%;
+  height: 50%;
+  border: 3rpx solid var(--icon-color, var(--primary-color));
+  border-radius: 3rpx 3rpx 0 3rpx;
+  transform: rotate(45deg);
+}
+
+.icon-history {
+  width: 55%;
+  height: 55%;
+  border: 3rpx solid var(--icon-color, var(--primary-color));
+  border-radius: 50%;
+  border-left-color: transparent;
+}
+
+.icon-history::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3rpx;
+  height: 40%;
+  background: var(--icon-color, var(--primary-color));
+  transform: translate(-50%, -100%);
+}
+
+.icon-history::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30%;
+  height: 3rpx;
+  background: var(--icon-color, var(--primary-color));
+  transform: translate(-100%, -50%);
+}
+
+.icon-settings {
+  width: 50%;
+  height: 50%;
+  border: 3rpx solid var(--icon-color, var(--primary-color));
+  border-radius: 50%;
+}
+
+.icon-settings::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140%;
+  height: 140%;
+  transform: translate(-50%, -50%);
+  background: 
+    linear-gradient(var(--icon-color, var(--primary-color)), var(--icon-color, var(--primary-color))) center/3rpx 100% no-repeat,
+    linear-gradient(var(--icon-color, var(--primary-color)), var(--icon-color, var(--primary-color))) 0 center/100% 3rpx no-repeat;
+  opacity: 0.5;
+}
+
+.icon-arrow-right {
+  width: 30%;
+  height: 30%;
+  border: 3rpx solid var(--icon-color, var(--primary-color));
+  border-left: none;
+  border-bottom: none;
+  transform: rotate(45deg);
+}
+
+.icon-close {
+  width: 50%;
+  height: 50%;
+  position: relative;
+}
+
+.icon-close::before,
+.icon-close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 3rpx;
+  background: var(--icon-color, var(--primary-color));
+}
+
+.icon-close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.icon-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.icon-check {
+  width: 50%;
+  height: 30%;
+  border: 3rpx solid var(--icon-color, var(--primary-color));
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg);
+}
+
+.icon-star {
+  width: 0;
+  height: 0;
+  border-left: 30% solid transparent;
+  border-right: 30% solid transparent;
+  border-bottom: 55% solid var(--icon-color, var(--primary-color));
+}
+
+.icon-home {
+  width: 60%;
+  height: 50%;
+  border: 3rpx solid var(--icon-color, var(--primary-color));
+  border-top: none;
+}
+
+.icon-home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-left: 40% solid transparent;
+  border-right: 40% solid transparent;
+  border-bottom: 50% solid var(--icon-color, var(--primary-color));
+  transform: translateX(-50%);
+  opacity: 0.3;
+}
+
+.icon-profile {
+  width: 35%;
+  height: 30%;
+  border: 3rpx solid var(--icon-color, var(--primary-color));
+  border-radius: 50%;
+}
+
+.icon-profile::before {
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  width: 55%;
+  height: 35%;
+  border: 3rpx solid var(--icon-color, var(--primary-color));
+  border-radius: 0 0 50% 50%;
+  border-top: none;
+  transform: translateX(-50%);
+}
