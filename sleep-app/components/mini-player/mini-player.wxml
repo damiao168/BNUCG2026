@@ -1,0 +1,15 @@
+<view class="mini-player {{show ? 'show' : ''}}" bindtap="onTap">
+  <image class="cover" src="{{audio.cover || '/static/images/default-cover.png'}}" mode="aspectFill"></image>
+  <view class="info">
+    <view class="name ellipsis">{{audio.name || '未知音频'}}</view>
+    <view class="status text-muted">{{isPlaying ? '正在播放' : '已暂停'}}</view>
+  </view>
+  <view class="controls">
+    <view class="btn" catchtap="togglePlay">
+      <text>{{isPlaying ? '⏸' : '▶'}}</text>
+    </view>
+    <view class="btn close" catchtap="onClose">
+      <text>✕</text>
+    </view>
+  </view>
+</view>

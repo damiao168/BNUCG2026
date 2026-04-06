@@ -1,0 +1,150 @@
+.page-container {
+  min-height: 100vh;
+  background-color: var(--bg-page);
+  transition: background-color 0.3s ease;
+}
+
+.header {
+  margin-bottom: 30rpx;
+}
+
+.header-title {
+  font-size: 40rpx;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 10rpx;
+}
+
+.header-desc {
+  font-size: 28rpx;
+  color: var(--text-secondary);
+}
+
+.category-scroll {
+  margin: 0 -32rpx;
+  padding: 0 32rpx;
+  margin-bottom: 24rpx;
+}
+
+.category-list {
+  display: flex;
+  gap: 16rpx;
+  padding-right: 32rpx;
+}
+
+.category-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  padding: 16rpx 28rpx;
+  background: var(--bg-card);
+  border-radius: 50rpx;
+  font-size: 26rpx;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(4rpx);
+}
+
+.category-item.active {
+  background: var(--primary-color);
+  color: #FFFFFF;
+}
+
+.category-icon {
+  margin-right: 8rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.training-list {
+  margin-top: 24rpx;
+}
+
+.training-card {
+  padding: 28rpx;
+  margin-bottom: 20rpx;
+  background: var(--bg-card);
+  backdrop-filter: blur(4rpx);
+}
+
+.training-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16rpx;
+}
+
+.training-icon {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20rpx;
+  background: rgba(90, 125, 154, 0.08);
+}
+
+.training-icon.breath {
+  background: rgba(141, 123, 104, 0.1);
+}
+
+.training-icon.body {
+  background: rgba(200, 162, 200, 0.1);
+}
+
+.training-icon.training {
+  background: rgba(90, 125, 154, 0.08);
+}
+
+.training-icon.heart {
+  background: rgba(200, 162, 200, 0.1);
+}
+
+.training-info {
+  flex: 1;
+}
+
+.training-name {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8rpx;
+}
+
+.training-meta {
+  font-size: 26rpx;
+  color: var(--text-secondary);
+}
+
+.dot {
+  margin: 0 8rpx;
+}
+
+.training-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.training-desc {
+  font-size: 28rpx;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 16rpx;
+}
+
+.training-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+}
+
+.tag {
+  padding: 8rpx 20rpx;
+  background: rgba(90, 125, 154, 0.06);
+  border-radius: 20rpx;
+  font-size: 24rpx;
+  color: var(--text-secondary);
+}

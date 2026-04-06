@@ -1,0 +1,5 @@
+<svg viewBox="0 0 40 40" width="100%" height="100%">
+  <path d="M2 15 Q12 8, 22 15 T42 15" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M2 25 Q12 18, 22 25 T42 25" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <path d="M2 35 Q12 28, 22 35 T42 35" fill="none" stroke="currentColor" stroke-width="1"/>
+</svg>

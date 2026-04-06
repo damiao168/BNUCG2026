@@ -1,0 +1,44 @@
+<view class="login-container">
+  <view class="login-header">
+    <view class="logo-wrapper">
+      <view class="logo-icon">
+        <text class="logo-text">🌙</text>
+      </view>
+    </view>
+    <text class="app-title">助眠混音</text>
+    <text class="app-subtitle">选择声音，安然入睡</text>
+  </view>
+  
+  <view class="login-content">
+    <view class="feature-list">
+      <view class="feature-item">
+        <text class="feature-icon">🎵</text>
+        <text class="feature-text">多种环境音自由混音</text>
+      </view>
+      <view class="feature-item">
+        <text class="feature-icon">🎧</text>
+        <text class="feature-text">打造专属助眠声景</text>
+      </view>
+      <view class="feature-item">
+        <text class="feature-icon">💤</text>
+        <text class="feature-text">帮助放松身心入眠</text>
+      </view>
+    </view>
+  </view>
+  
+  <view class="login-footer">
+    <button class="login-btn" bindtap="onGuestLoginTap" disabled="{{isSubmitting}}">
+      <text class="btn-text">进入应用</text>
+    </button>
+    
+    <button class="login-btn secondary-btn" bindtap="onWechatLoginTap" loading="{{isSubmitting}}" disabled="{{isSubmitting}}">
+      <text class="btn-icon secondary-icon">👤</text>
+      <text class="btn-text secondary-text">同步微信头像与昵称</text>
+    </button>
+    
+    <view class="privacy-tips">
+      <text class="tips-text">进入即表示你已阅读</text>
+      <text class="tips-link" bindtap="onPrivacyTap">《用户隐私说明》</text>
+    </view>
+  </view>
+</view>

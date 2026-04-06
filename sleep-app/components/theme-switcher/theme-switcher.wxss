@@ -1,0 +1,46 @@
+.theme-switcher {
+  position: relative;
+  width: 80rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50rpx;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.switcher-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--switcher-bg);
+  backdrop-filter: blur(10rpx);
+  -webkit-backdrop-filter: blur(10rpx);
+  transition: background 0.4s ease;
+}
+
+.theme-switcher:active {
+  transform: scale(0.9);
+}
+
+.icon-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.icon-wrapper.animating {
+  transform: rotate(180deg);
+}
+
+.icon {
+  font-size: 40rpx;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}

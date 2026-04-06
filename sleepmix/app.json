@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "\u52a9\u7720\u6df7\u97f3",
+    "navigationBarBackgroundColor": "#F8F6F0",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#F8F6F0",
+    "backgroundTextStyle": "dark"
+  },
+  "requiredBackgroundModes": ["audio"],
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents",
+  "sitemapLocation": "sitemap.json"
+}
