@@ -150,6 +150,8 @@ I_specular = Ks × max(0, N · H)^n × C_light
 ## 二、实验结果
 
 按下 `B` 可以切换 Blinn-Phong 光照模型，按下 `H` 可以开启或关闭硬阴影效果。
+<img width="800" height="633" alt="ezgif-492a12fc8c88d3b6" src="https://github.com/user-attachments/assets/53754eb0-79ee-4751-8c02-d060c744fb8b" />
+
 
 
 ## 总结
