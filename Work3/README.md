@@ -111,8 +111,7 @@ I_specular = Ks × max(0, R · V)^n × C_light
 ## 实验结果
 
 程序成功渲染出红色球体和紫色圆锥，并能够通过 GUI 实时调节光照参数。调节 `Ka` 可以改变整体环境亮度，调节 `Kd` 可以改变漫反射强度，调节 `Ks` 和 `Shininess` 可以改变高光强度和高光范围。
-![Uploading ezgif-665448c66ec520d1.gif…]()
-
+<img width="788" height="626" alt="ezgif-665448c66ec520d1" src="https://github.com/user-attachments/assets/9944f75b-e108-4d76-814b-a20c89ececd4" />
 
 
 ## 选做内容
